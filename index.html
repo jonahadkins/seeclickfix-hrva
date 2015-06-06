@@ -32,7 +32,7 @@
       var scf = L.geoJson(data,{
         pointToLayer: function(feature, latlng) {
           var marker = L.marker(latlng, {});
-          marker.bindPopup(feature.properties.city + '<br/>' + feature.properties.description);
+          marker.bindPopup(feature.properties.summary + '<br/>' + feature.properties.description);
           return marker;
         }
       });
