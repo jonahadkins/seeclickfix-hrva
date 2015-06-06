@@ -28,7 +28,7 @@
     // load GeoJSON from an external file
     $.getJSON("scf.geojson", function(data) {
       // add GeoJSON layer to the map once the file is loaded
-      var scf = L.geoJson(data, {
+      var scf = L.geoJson(data,{
         pointToLayer: function(feature, latlng) {
           var marker = L.marker(latlng, {});
           marker.bindPopup(feature.properties.city + '<br/>' + feature.properties.description);
