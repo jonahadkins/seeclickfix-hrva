@@ -27,7 +27,7 @@
     // add GeoJSON layer to the map once the file is loaded
     L.geoJson(data,{
       pointToLayer: function(feature,latlng){
-      //var marker = L.marker(latlng,{icon: ratIcon});
+      var marker = L.marker(latlng,{});
       marker.bindPopup(feature.properties.city + '<br/>' + feature.properties.description);
       return marker;
     }
